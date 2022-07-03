@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/clipFragment"
+        tools:layout="@layout/fragment_clip"
+        android:name="com.test.task2.ClipFragment"
+        android:label="ClipFragment" />
+    <fragment
+        android:id="@+id/friendFragment"
+        tools:layout="@layout/fragment_friend"
+        android:name="com.test.task2.FriendFragment"
+        android:label="FriendFragment" >
+        <action
+            android:id="@+id/action_friendFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        tools:layout="@layout/fragment_message"
+        android:name="com.test.task2.MessageFragment"
+        android:label="MessageFragment" />
+    <fragment
+        android:id="@+id/musicFragment"
+        tools:layout="@layout/fragment_music"
+        android:name="com.test.task2.MusicFragment"
+        android:label="MusicFragment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        tools:layout="@layout/fragment_news"
+        android:name="com.test.task2.NewsFragment"
+        android:label="NewsFragment" />
+    <fragment
+        android:id="@+id/videoFragment"
+        tools:layout="@layout/fragment_video"
+        android:name="com.test.task2.VideoFragment"
+        android:label="VideoFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.test.task2.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_friendFragment"
+            app:destination="@id/friendFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_clipFragment2"
+            app:destination="@id/clipFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_musicFragment2"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_videoFragment2"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newsFragment2"
+            app:destination="@id/newsFragment" />
+    </fragment>
+</navigation>
