@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/historyList"
+        android:name="com.test.ownhistory.History.fragments.HistoryList"
+        android:label="fragment_history_list"
+        tools:layout="@layout/fragment_history_list" >
+        <action
+            android:id="@+id/action_historyList_to_historyItem"
+            app:destination="@id/historyItem" />
+        <action
+            android:id="@+id/action_historyList_to_incomeHistory"
+            app:destination="@id/incomeHistory" />
+        <action
+            android:id="@+id/action_historyList_to_outlayHistory"
+            app:destination="@id/outlayHistory" />
+        <action
+            android:id="@+id/action_historyList_to_statictic"
+            app:destination="@id/statictic" />
+        <action
+            android:id="@+id/action_historyList_to_main2"
+            app:destination="@id/main" />
+        <action
+            android:id="@+id/action_historyList_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_historyList_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyItem"
+        android:name="com.test.ownhistory.History.fragments.HistoryItem"
+        android:label="fragment_history_item"
+        tools:layout="@layout/fragment_history_item" />
+    <fragment
+        android:id="@+id/incomeHistory"
+        android:name="com.test.ownhistory.History.fragments.IncomeHistory"
+        android:label="fragment_income_history"
+        tools:layout="@layout/fragment_income_history" >
+        <action
+            android:id="@+id/action_incomeHistory_to_historyList"
+            app:destination="@id/historyList" />
+        <action
+            android:id="@+id/action_incomeHistory_to_historyItem"
+            app:destination="@id/historyItem" />
+        <action
+            android:id="@+id/action_incomeHistory_to_outlayHistory"
+            app:destination="@id/outlayHistory" />
+        <action
+            android:id="@+id/action_incomeHistory_to_statictic"
+            app:destination="@id/statictic" />
+    </fragment>
+    <fragment
+        android:id="@+id/outlayHistory"
+        android:name="com.test.ownhistory.History.fragments.OutlayHistory"
+        android:label="fragment_outlay_history"
+        tools:layout="@layout/fragment_outlay_history" >
+        <action
+            android:id="@+id/action_outlayHistory_to_historyItem"
+            app:destination="@id/historyItem" />
+        <action
+            android:id="@+id/action_outlayHistory_to_historyList"
+            app:destination="@id/historyList" />
+        <action
+            android:id="@+id/action_outlayHistory_to_incomeHistory"
+            app:destination="@id/incomeHistory" />
+        <action
+            android:id="@+id/action_outlayHistory_to_statictic"
+            app:destination="@id/statictic" />
+    </fragment>
+    <fragment
+        android:id="@+id/statictic"
+        android:name="com.test.ownhistory.History.fragments.Statictic"
+        android:label="fragment_statictic"
+        tools:layout="@layout/fragment_statictic" >
+        <action
+            android:id="@+id/action_statictic_to_historyList"
+            app:destination="@id/historyList" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.test.ownhistory.List.ShoppingListFragment"
+        android:label="fragment_shopping_list"
+        tools:layout="@layout/fragment_shopping_list" >
+        <action
+            android:id="@+id/action_shoppingListFragment_to_main2"
+            app:destination="@id/main" />
+        <action
+            android:id="@+id/action_shoppingListFragment_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/main"
+        android:name="com.test.ownhistory.MainWindow.Main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_historyList"
+            app:destination="@id/historyList" />
+        <action
+            android:id="@+id/action_main_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+        <action
+            android:id="@+id/action_main_to_settings2"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.test.ownhistory.Settings.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
